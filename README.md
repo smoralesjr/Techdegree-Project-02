@@ -1,1 +1,1 @@
-# Techdegree-Project-02
+# Treehouse Full Stack JavaScript Techdegree Project 02
