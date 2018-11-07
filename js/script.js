@@ -7,6 +7,7 @@ FSJS project 2 - List Filter and Pagination
 
 //storing li elements containing student info
 const studentItem = document.querySelectorAll(".student-item");
+const studentDiv = document.querySelector("ul.student-list");
 
 // Create a function to hide all of the items in the list except for the ten you want to show
 // Tip: Keep in mind that with a list of 54 studetns, the last page will only display four
@@ -39,10 +40,10 @@ const displayStudents = (studentStart, studentEnd) => {
 // Add functionality to the pagination buttons so that they show and hide the correct items
 // Tip: If you created a function above to show/hide list items, it could be helpful here
 
-let studentDiv = document.querySelector("ul.student-list");
-let paginationButtons =
+// let studentDiv = document.querySelector("ul.student-list");
+const paginationButtons =
     `<ul class="pagination">
-        <li id="buttonOne"><a>1</a></li>
+        <li id="buttonOne"><a href="#">1</a></li>
         <li id="buttonTwo"><a href="#">2</a></li>
         <li id="buttonThree"><a href="#">3</a></li>
         <li id="buttonFour"><a href="#">4</a></li>
@@ -50,16 +51,17 @@ let paginationButtons =
      </ul>`;
 
 studentDiv.innerHTML += paginationButtons;
+//
+// let buttonOne = document.getElementById("buttonOne");
+// let buttonTwo = document.getElementById("buttonTwo");
+// let buttonThree = document.getElementById("buttonThree");
+// let buttonFour = document.getElementById("buttonFour");
+// let buttonFive = document.getElementById("buttonFive");
 
-let buttonOne = document.getElementById("buttonOne");
-let buttonTwo = document.getElementById("buttonTwo");
-let buttonThree = document.getElementById("buttonThree");
-let buttonFour = document.getElementById("buttonFour");
-let buttonFive = document.getElementById("buttonFive");
-
-buttonOne.addEventListener("click", ()=> {
-  displayStudents(0, 10);
-});
+// buttonOne.addEventListener("click", function (event) {
+//   event.preventDefault();
+//   displayStudents(0, 10);
+// });
 
 // Setting page default where first 10 students are displayed
 // displayStudents(0, 10);
